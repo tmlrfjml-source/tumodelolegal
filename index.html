@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>TuModeloLegal - Plantillas legales con IA</title>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <style>
     body {
       font-family: system-ui, sans-serif;
@@ -17,6 +18,29 @@
       max-width: 700px;
       margin: 0 auto;
       padding: 2rem;
+    }
+    nav {
+      background-color: white;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      margin: 0;
+      padding: 0.5rem 1rem;
+      flex-wrap: wrap;
+    }
+    nav ul li {
+      margin: 0 1rem;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #005eff;
+      font-weight: bold;
     }
     header h1 {
       font-size: 2rem;
@@ -58,18 +82,28 @@
   </style>
 </head>
 <body>
-  <header>
+
+  <nav>
+    <ul>
+      <li><a href="/">Inicio</a></li>
+      <li><a href="/guia_alegaciones.html">Guías</a></li>
+      <li><a href="#packs">Modelos</a></li>
+      <li><a href="mailto:info@tumodelolegal.com">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <header data-aos="fade-down">
     <h1>TuModeloLegal</h1>
     <p>Plantillas legales y reclamaciones administrativas con ayuda inteligente</p>
   </header>
 
   <main>
-    <section>
+    <section data-aos="fade-up">
       <h2>Qué ofrecemos</h2>
       <p>En TuModeloLegal encuentras modelos legales editables, listos para enviar a la administración. Incluimos instrucciones paso a paso y un asistente de IA que te guía para personalizar tus documentos. Sin tecnicismos, sin abogados, sin complicaciones.</p>
     </section>
 
-    <section>
+    <section data-aos="fade-up" data-aos-delay="100">
       <h2>Guías rápidas</h2>
       <ul>
         <li><a href="/guia_alegaciones.html">Cómo presentar una alegación paso a paso</a></li>
@@ -77,7 +111,7 @@
       </ul>
     </section>
 
-    <section>
+    <section data-aos="fade-up" data-aos-delay="200" id="packs">
       <h2>Packs con IA</h2>
       <ul>
         <li>
@@ -108,5 +142,11 @@
 
     <p>TuModeloLegal™ – Todos los derechos reservados</p>
   </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
 </body>
 </html>
